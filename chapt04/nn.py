@@ -23,7 +23,16 @@ def forward(network, x):
     return a3
 
 
-nw = init_network()
-x = np.array([1, .5])
-print(forward(nw, x))
+def softmax(a):
+    c = np.max(a)
+    exp_a = np.exp(a - c)
+    sum_exp_a = np.sum(exp_a)
+    y = exp_a / sum_exp_a
+    return y
 
+
+nw = init_network()
+xx = np.array([1, .5])
+print(forward(nw, xx))
+
+print(softmax(np.array([0.2, 3, 2])))
