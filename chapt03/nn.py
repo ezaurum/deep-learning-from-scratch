@@ -36,3 +36,4 @@ xx = np.array([1, .5])
 print(forward(nw, xx))
 
 print(softmax(np.array([0.2, 3, 2])))
+
